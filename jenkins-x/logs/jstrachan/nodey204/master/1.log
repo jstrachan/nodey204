@@ -1,0 +1,49 @@
+Step: step-credential-initializer-4rw7l:
+
+{"level":"warn","ts":1565886398.7453442,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1565886398.7459435,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+Step: step-working-dir-initializer-b9vpq:
+
+{"level":"warn","ts":1565886399.3729668,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1565886399.3744946,"logger":"fallback-logger","caller":"bash/main.go:65","msg":"Successfully executed command \"mkdir -p /workspace/source\""}
+Step: step-place-tools:
+
+Step: step-git-source-meta-*********-nodey204-master-m2nlb:
+
+{"level":"warn","ts":1565886404.4354646,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1565886405.0675156,"logger":"fallback-logger","caller":"git/git.go:102","msg":"Successfully cloned https://github.com/*********/nodey204.git @ master in path /workspace/source"}
+Step: step-git-merge:
+
+{"level":"info","msg":"Using SHAs from PULL_REFS=master:","time":"2019-08-15T16:26:45Z"}
+{"level":"warning","msg":"no SHAs to merge, falling back to initial cloned commit","time":"2019-08-15T16:26:45Z"}
+Step: step-merge-pull-refs:
+
+SKIP merge-pull-refs: Nothing to merge
+Step: step-create-effective-pipeline:
+
+{"level":"info","msg":"Deleting and cloning the Jenkins X versions repo","time":"2019-08-15T16:26:46Z"}
+{"level":"info","msg":"Cloning the Jenkins X versions repo https://github.com/jenkins-x/jenkins-x-versions.git with revision v1.0.19 to /builder/home/.**/jenkins-x-versions","time":"2019-08-15T16:26:46Z"}
+From https://github.com/jenkins-x/jenkins-x-versions
+ * tag               v1.0.19    -> FETCH_HEAD
+{"level":"info","msg":"Effective pipeline written to jenkins-x-effective.yml","time":"2019-08-15T16:26:50Z"}
+Step: step-create-tekton-crds:
+
+{"level":"info","msg":"Deleting and cloning the Jenkins X versions repo","time":"2019-08-15T16:26:50Z"}
+{"level":"info","msg":"Cloning the Jenkins X versions repo https://github.com/jenkins-x/jenkins-x-versions.git with revision v1.0.19 to /builder/home/.**/jenkins-x-versions","time":"2019-08-15T16:26:50Z"}
+From https://github.com/jenkins-x/jenkins-x-versions
+ * tag               v1.0.19    -> FETCH_HEAD
+{"level":"info","msg":"running command: echo \\$(**-release-version) \u003e VERSION","time":"2019-08-15T16:26:52Z"}
+{"level":"info","msg":"","time":"2019-08-15T16:26:53Z"}
+{"level":"info","msg":"running command: ** step tag --version \\$(cat VERSION)","time":"2019-08-15T16:26:53Z"}
+{"level":"info","msg":"Updating chart version in charts/nodey204/Chart.yaml to 0.0.1","time":"2019-08-15T16:26:53Z"}
+{"level":"info","msg":"Updating repository in charts/nodey204/values.yaml to gcr.io/apps-dev-229310/nodey204","time":"2019-08-15T16:26:53Z"}
+{"level":"info","msg":"Updating tag in charts/nodey204/values.yaml to 0.0.1","time":"2019-08-15T16:26:53Z"}
+{"level":"info","msg":"Tag v0.0.1 created and pushed to remote origin","time":"2019-08-15T16:26:56Z"}
+{"level":"info","msg":"","time":"2019-08-15T16:26:56Z"}
+{"level":"info","msg":"PipelineActivity for *********-nodey204-master-1","time":"2019-08-15T16:26:56Z"}
+{"level":"info","msg":"Applying changes ","time":"2019-08-15T16:26:56Z"}
+{"level":"info","msg":"upserted PipelineResource *********-nodey204-master for the git repository https://github.com/*********/nodey204.git and branch master","time":"2019-08-15T16:26:56Z"}
+{"level":"info","msg":"upserted Task *********-nodey204-master-from-build-pack-1","time":"2019-08-15T16:26:56Z"}
+{"level":"info","msg":"upserted Pipeline *********-nodey204-master-1","time":"2019-08-15T16:26:56Z"}
+{"level":"info","msg":"created PipelineRun *********-nodey204-master-1","time":"2019-08-15T16:26:56Z"}
+{"level":"info","msg":"created PipelineStructure *********-nodey204-master-1","time":"2019-08-15T16:26:56Z"}
